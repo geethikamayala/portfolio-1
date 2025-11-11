@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geethika Mayalavarapu | Creative Strategist Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body, h1, h2, h3, p, a {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #222;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.3s ease;
+    }
+    body {
+      background: linear-gradient(135deg, #fefefe 0%, #e2f0ff 100%);
+      padding: 0 20px;
+      min-height: 100vh;
+    }
+    a {
+      color: #0366d6;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    a:hover, a:focus {
+      color: #02396d;
+      outline: none;
+    }
+    /* Layout containers */
+    .container {
+      max-width: 960px;
+      margin: 0 auto 60px;
+      padding: 20px 0;
+    }
+    section {
+      margin-top: 60px;
+      position: relative;
+    }
+    /* SCANNABLE HEADINGS */
+    h1, h2, h3 {
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #114f8e;
+    }
+    p {
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin-bottom: 18px;
+      color: #333;
+      letter-spacing: 0.02em;
+    }
+    /* BUTTONS */
+    .btn {
+      background: #114f8e;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 30px;
+      margin-right: 14px;
+      user-select: none;
+      font-size: 1rem;
+      transition: background-color 0.25s ease, transform 0.2s ease;
+      box-shadow: 0 6px 12px rgba(17,79,142,0.3);
+      display: inline-block;
+      min-width: 130px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .btn:hover {
+      background: #063270;
+      transform: scale(1.06);
+      box-shadow: 0 10px 18px rgba(6,50,112,0.5);
+    }
+
+    /* NAVBAR NAME ON TOP LEFT */
+    .top-header {
+      position: fixed;
+      top: 12px;
+      left: 24px;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      color: #114f8e;
+      user-select: none;
+      z-index: 1000;
+      cursor: default;
+      font-family: 'Courier New', Courier, monospace;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+    }
+
+    /* HERO SECTION */
+    .hero {
+      margin-top: 50px;
+      text-align: center;
+      padding: 100px 0 40px;
+      user-select: none;
+    }
+    .hero .headline {
+      font-weight: 900;
+      font-size: 2.75rem;
+      color: #172a4c;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+    .hero .subheading {
+      font-size: 1.25rem;
+      font-weight: 500;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: #34495e;
+      line-height: 1.45;
+    }
+    .badge-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .badge-tag {
+      background-color: #1e90ff;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      box-shadow: 0px 3px 8px rgba(30, 144, 255, 0.4);
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .badge-tag:hover {
+      background-color: #005ab4;
+    }
+
+    /* SHORT INTRO STRIP */
+    .intro-strip {
+      background: #114f8e;
+      color: #f0f7ff;
+      padding: 24px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-align: center;
+      box-shadow: 0 8px 15px rgba(17,79,142,.5);
+      max-width: 700px;
+      margin: 0 auto;
+      user-select: none;
+      letter-spacing: 0.03em;
+    }
+
+    /* ABOUT */
+    .about-section p {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.1rem;
+      color: #34495e;
+    }
+    .about-section p strong {
+      font-weight: 700;
+      color: #114f8e;
+    }
+    .about-section ul {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      list-style-type: none;
+      margin-top: 12px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 1rem;
+      user-select: none;
+    }
+    .about-section ul li {
+      background: #ecf4ff;
+      color: #114f8e;
+      padding: 6px 16px;
+      border-radius: 24px;
+      box-shadow: inset 0 0 6px rgba(17,79,142,.15);
+    }
+    /* PROOF BANNER */
+    .proof-banner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 40px;
+      user-select: none;
+    }
+    .pill-card {
+      background: #1e90ff;
+      color: white;
+      min-width: 160px;
+      padding: 18px 20px;
+      border-radius: 32px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      box-shadow: 0 6px 14px rgba(30,144,255,0.5);
+      cursor: default;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .pill-card:hover {
+      transform: scale(1.06);
+      box-shadow: 0 10px 22px rgba(30,144,255,0.8);
+    }
+
+    /* CASE STUDIES */
+    .case-studies {
+      margin-top: 40px;
+    }
+    .case-studies h2 {
+      margin-bottom: 6px;
+      font-weight: 900;
+      font-size: 2.3rem;
+      text-align: center;
+      user-select: none;
+    }
+    .case-studies p.subhead {
+      text-align: center;
+      color: #556677;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      user-select: none;
+    }
+    .cards-row {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding-bottom: 20px;
+      scroll-behavior: smooth;
+      user-select: none;
+    }
+    .cards-row::-webkit-scrollbar {
+      height: 8px;
+    }
+    .cards-row::-webkit-scrollbar-thumb {
+      background: #1e90ff;
+      border-radius: 4px;
+    }
+    .case-card {
+      flex: 0 0 320px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease;
+      user-select: auto;
+      cursor: grab;
+    }
+    .case-card:active {
+      cursor: grabbing;
+    }
+    .case-card:hover {
+      box-shadow: 0 10px 18px rgba(30, 144, 255, 0.35);
+    }
+    .case-card h3 {
+      font-weight: 800;
+      color: #114f8e;
+      margin-bottom: 10px;
+    }
+    .metric-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      margin-bottom: 12px;
+    }
+    .metric-badge {
+      background-color: #1e90ff;
+      color: white;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      box-shadow: 0px 3px 7px rgba(30, 144, 255, 0.6);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .metric-badge svg {
+      fill: white;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+    .case-role {
+      margin-top: auto;
+      font-weight: 600;
+      color: #556677;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      user-select: text;
+    }
+    .section-footer {
+      text-align: center;
+      font-style: italic;
+      font-weight: 600;
+      margin-top: 24px;
+      color: #444;
+      max-width: 720px;
+      user-select: none;
+    }
+
+    /* WORK PROCESS & AI WORKFLOW */
+    .work-process, .ai-workflow {
+      background: #f0f7ff;
+      border-radius: 20px;
+      padding: 24px 30px;
+      max-width: 700px;
+      margin: 0 auto 60px;
+      box-shadow: 0 8px 20px rgba(30, 144, 255, 0.2);
+      user-select: none;
+      color: #114f8e;
+      font-weight: 700;
+    }
+    .process-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+      padding-left: 0;
+      list-style: none;
+      justify-content: center;
+    }
+    .process-list li {
+      background: white;
+      border-radius: 32px;
+      padding: 8px 22px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 1px 10px rgba(17, 79, 142, 0.18);
+    }
+    .badge-stack {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .badge-stack span {
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 8px 18px;
+      border-radius: 30px;
+      background: #1e90ff;
+      color: white;
+      box-shadow: 0 5px 14px rgba(30,144,255,0.55);
+      user-select: none;
+    }
+
+    /* 500+ ADS SECTION */
+    .ads-section {
+      text-align: center;
+      margin: 80px 0 80px;
+      user-select: none;
+      color: #114f8e;
+    }
+    .ads-section h2 {
+      font-size: 2.6rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .ads-section p {
+      font-weight: 600;
+      font-size: 1.2rem;
+      max-width: 680px;
+      margin: 0 auto;
+      color: #34495e;
+      letter-spacing: 0.01em;
+      user-select: none;
+    }
+
+    /* MY WORK SAMPLES */
+    .work-samples {
+      max-width: 960px;
+      margin: 0 auto 60px;
+    }
+    .work-samples h2 {
+      font-weight: 900;
+      font-size: 2rem;
+      color: #114f8e;
+      margin-bottom: 24px;
+      user-select: none;
+      text-align: center;
+    }
+    .work-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 30px;
+      user-select: none;
+    }
+    .work-link-card {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      border-radius: 18px;
+      padding: 20px;
+      transition: box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      user-select: text;
+    }
+    .work-link-card:hover {
+      box-shadow: 0 10px 24px rgba(30, 144, 255, 0.6);
+    }
+    .work-link-card strong {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      color: #1e90ff;
+      user-select: none;
+    }
+    .work-link-card img, .work-link-card iframe {
+      width: 100%;
+      border-radius: 12px;
+      user-select: none;
+    }
+    .work-link-card video {
+      width: 100%;
+      border-radius: 12px;
+      pointer-events: none;
+      user-select: none;
+    }
+    .work-link-desc {
+      margin-top: 12px;
+      font-size: 0.97rem;
+      color: #556677;
+      text-align: center;
+      user-select: none;
+      line-height: 1.4;
+    }
+
+    /* VIDEO EMBEDS */
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      min-height: 240px;
+      box-shadow: 0 8px 15px rgba(30, 144, 255, 0.25);
+      margin-top: 20px;
+      user-select: none;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      max-width: 720px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+      user-select: none;
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-weight: 900;
+      font-size: 2.3rem;
+      color: #114f8e;
+      margin-bottom: 18px;
+    }
+    /* No button for email - visible mail and linkedin with icons */
+    .contact-info {
+      font-size: 1.15rem;
+      color: #223344;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 36px;
+      user-select: auto;
+    }
+    .contact-info a, .contact-info span {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #0366d6;
+      font-weight: 700;
+      font-size: 1.15rem;
+      transition: color 0.3s ease;
+    }
+    .contact-info a:hover {
+      color: #02396d;
+    }
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      fill: #0366d6;
+    }
+
+    /* Scroll indicator for cards */
+    .scroll-hint {
+      text-align: center;
+      color: #667a94;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 12px;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cards-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+      .case-card {
+        flex: 0 0 280px;
+      }
+      .contact-info {
+        flex-direction: column;
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top-left branded name -->
+<div class="top-header" aria-label="Brand Name">
+  GEETHIKA MAYALAVARAPU
+</div>
+
+<div class="container">
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Hero Section">
+    <h1 class="headline">Creative Strategist Who Builds Ads That Actually Convert.</h1>
+    <p class="subheading">Blending data, psychology, and creative storytelling to scale ads for D2C brands and digital coaches.</p>
+    <div class="btn-group" style="margin-bottom: 18px;">
+      <button class="btn" onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'})">View Work</button>
+      <button class="btn" onclick="window.open('https://app.enhancv.com/share/8ce32b46/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic', '_blank')">Download Resume</button>
+    </div>
+    <div class="badge-tags" aria-label="Professional Tags">
+      <span class="badge-tag">D2C</span>
+      <span class="badge-tag">Dating Coaches</span>
+      <span class="badge-tag">Career Coaches</span>
+      <span class="badge-tag">Occult Coaches</span>
+      <span class="badge-tag">Skincare</span>
+      <span class="badge-tag">Performance Copy</span>
+    </div>
+  </section>
+
+  <!-- SHORT INTRO STRIP -->
+  <section class="intro-strip" aria-label="Introduction Statement">
+    I don't just create ads. I analyze them, optimize them, and scale them using creative intelligence + data.
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" aria-label="About Geethika">
+    <h2>Meet the Brain Behind the Clicks.</h2>
+    <p>Hi, I’m Geethika Mayalavarapu, a Creative Strategist specializing in performance copy and data-driven creative direction.</p>
+    <p>I help brands scale by crafting scroll-stopping hooks, conversion-focused scripts, and audience-led messaging that works across Meta, YouTube, and funnel ecosystems.</p>
+    <p><strong>My edge?</strong> I don’t rely on guesses, I read creative metrics (CTR, hook rate, retention, CPA, funnel CVR) and turn insights into creative decisions that move the needle.</p>
+    <ul>
+      <li>D2C Skincare</li>
+      <li>Dating & Career Coaches</li>
+      <li>Occult & Lifestyle Brands</li>
+    </ul>
+    <p>🚀 The result? High-scaling ads driven by psychology, storytelling, and performance logic.</p>
+  </section>
+
+  <!-- PROOF BANNER -->
+  <section class="proof-banner" aria-label="Achievement Metrics">
+    <div class="pill-card" title="Ads created">500+ Ads created in 12 months</div>
+    <div class="pill-card" title="Weekly ad spend">₹1L+ weekly scaling creatives</div>
+    <div class="pill-card" title="Hook rate">42%+ Hook Rate achieved</div>
+    <div class="pill-card" title="Best CPA">Best CPA beat client target (₹900 → ₹820)</div>
+    <div class="pill-card" title="Total spend">₹2.4L+ spend scaled on single creative</div>
+  </section>
+
+  <!-- CASE STUDIES SECTION -->
+  <section id="work" class="case-studies" aria-label="Case Studies Section">
+    <h2>Creative That Scaled — Backed By Data.</h2>
+    <p class="subhead">3 campaigns. 3 different audiences. 1 common outcome — optimized creatives that beat benchmarks and scaled hard.</p>
+    <div class="cards-row" tabindex="0" aria-roledescription="carousel">
+      
+      <!-- Case Study 1 -->
+      <article class="case-card" aria-label="Love School Dating Coach Case Study">
+        <h3>Love School (Dating Coach)</h3>
+        <p><strong>Goal:</strong> L1 Workshop Registrations</p>
+        <p><strong>Target CPA:</strong> ₹900</p>
+        <p><strong>Achieved CPA:</strong> <span style="color:#27ae60;">✅ ₹820</span></p>
+        <div class="metric-badges-row">
+          <span class="metric-badge" title="Ad spend">📌 ₹2,40,000+ ad spend</span>
+          <span class="metric-badge" title="Hook rate">⚡ 42.15% Hook Rate</span>
+          <span class="metric-badge" title="Click through rate">🎯 1.62% CTR</span>
+        </div>
+        <p class="case-role">Hooks → Copywriting → Script → Creative Direction → Optimization → Scaling</p>
+        <a href="https://drive.google.com/file/d/195SAfxzAh7tOl0cU2WcMaqjaKVO7cp3I/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Watch Video for Love School Case Study">
+          ▶ Watch Creative Video
+        </a>
+      </article>
+
+      <!-- Case Study 2 -->
+      <article class="case-card" aria-label="Career Coach Case Study">
+        <h3>Career Coach (Bollywood Angle)</h3>
+        <p><strong>Strategy:</strong> Static creatives that make clients feel spoken to, calling their pain points and offering solutions.</p>
+        <div class="metric-badges-row">
+          <span class="metric-badge" title="Ad spend">🚀 ₹1,00,000+ spent in 1 week</span>
+          <span class="metric-badge" title="Click through rate">🎯 1.12%+ CTR</span>
+          <span class="metric-badge" title="Creative direction">📈 Scaled with static + script-led storytelling</span>
+        </div>
+        <p class="case-role">Angle creation → Copy → Visual direction → Testing → Iteration</p>
+        <a href="https://drive.google.com/file/d/1zNrW4bU1D8F1W2xTGQo6Cqty_1HRL83J/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="View Creative Static for Career Coach Case Study">
+          ▶ View Creative Static
+        </a>
+      </article>
+
+      <!-- Case Study 3 -->
+      <article class="case-card" aria-label="D2C Skincare Brand Case Study">
+        <h3>D2C Skincare Brand</h3>
+        <p><strong>Goal:</strong> Mass produce ads, shoot 20 ads in a day, take creative director's role for the shoot.</p>
+        <div class="metric-badges-row">
+          <span class="metric-badge" title="Return on Ad Spend">📌 3+ ROAS achieved</span>
+          <span class="metric-badge" title="Audience testing">✅ Audience-led creative testing</span>
+          <span class="metric-badge" title="Messaging structure">✅ Messaging + conversion-focused structure</span>
+        </div>
+        <p class="case-role">Creative strategy → Messaging → Hooks → Copy → Performance reviews</p>
+        <a href="https://drive.google.com/file/d/1wNePesBN58VUAeVGle3EmVT8NP2VEK3v/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="View Creative Video for D2C Skincare Case Study">
+          ▶ View Creative Video
+        </a>
+      </article>
+
+    </div>
+    <p class="section-footer">
+      One belief: Creative isn't just design, it's data, psychology, testing & storytelling working together.
+    </p>
+  </section>
+
+  <!-- WORK PROCESS -->
+  <section class="work-process" aria-label="Work Process">
+    <h2>My Work Process</h2>
+    <div>
+      <h3>If data exists:</h3>
+      <ul class="process-list">
+        <li>Data</li>
+        <li>Angles</li>
+        <li>Hooks</li>
+        <li>Scripts</li>
+        <li>Production</li>
+        <li>Testing</li>
+      </ul>
+    </div>
+    <div>
+      <h3>If new account:</h3>
+      <ul class="process-list">
+        <li>Research</li>
+        <li>Positioning</li>
+        <li>Messaging</li>
+        <li>Copy</li>
+        <li>Design</li>
+        <li>Test</li>
+        <li>Optimize</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AI POWERED WORKFLOW -->
+  <section class="ai-workflow" aria-label="AI Powered Workflow">
+    <h2>AI is my accelerator, not my replacement.</h2>
+    <ul class="process-list">
+      <li>Insight mining - Perplexity, Meta Library, ChatGPT</li>
+      <li>Angle & hook ideation - Claude, ChatGPT</li>
+      <li>Script & copywriting - Jasper, ChatGPT</li>
+      <li>Creative direction - MidJourney, Runway, CapCut AI</li>
+      <li>Iteration - Data + AI optimization loops</li>
+    </ul>
+    <div class="badge-stack" aria-label="AI Tools Used">
+      <span>ChatGPT</span><span>Claude</span><span>Perplexity</span><span>Jasper</span>
+      <span>MidJourney</span><span>Runway</span><span>CapCut AI</span>
+    </div>
+  </section>
+
+  <!-- 500+ ADS SECTION -->
+  <section class="ads-section" aria-label="500 Plus Ads Section">
+    <h2>500+ ads created. Millions of impressions influenced. One obsession - Performance.</h2>
+    <p>From UGC scripts to statics, funnels to hooks, I test fast, learn faster, and scale what works.</p>
+  </section>
+
+  <!-- MY WORK SAMPLES -->
+  <section class="work-samples" aria-label="My Work Samples">
+    <h2>My Work Samples</h2>
+    <div class="work-links">
+
+      <!-- Statics -->
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/1zNrW4bU1D8F1W2xTGQo6Cqty_1HRL83J/view?usp=drive_link', '_blank')" aria-label="Static Creative 1">
+        <strong>Static 1</strong>
+        <img src="https://drive.google.com/uc?export=view&id=1zNrW4bU1D8F1W2xTGQo6Cqty_1HRL83J" alt="Static Creative Sample 1" loading="lazy" />
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/15m2uqxLNtNmxwhKedQYlG2hJb3mhc_HP/view?usp=drive_link', '_blank')" aria-label="Static Creative 2">
+        <strong>Static 2</strong>
+        <img src="https://drive.google.com/uc?export=view&id=15m2uqxLNtNmxwhKedQYlG2hJb3mhc_HP" alt="Static Creative Sample 2" loading="lazy" />
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/17qTtr7qC30odz22bGsLdPdHjC70LVFfE/view?usp=drive_link', '_blank')" aria-label="Static Creative 3">
+        <strong>Static 3</strong>
+        <img src="https://drive.google.com/uc?export=view&id=17qTtr7qC30odz22bGsLdPdHjC70LVFfE" alt="Static Creative Sample 3" loading="lazy" />
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/141PyvF98JnOk80cnX1w1x4jRFQQ63lSC/view?usp=drive_link', '_blank')" aria-label="Static Creative 4">
+        <strong>Static 4</strong>
+        <img src="https://drive.google.com/uc?export=view&id=141PyvF98JnOk80cnX1w1x4jRFQQ63lSC" alt="Static Creative Sample 4" loading="lazy" />
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/1X52Ho7iD7SxAFonGC48njj0Kp0VZSjLB/view?usp=drive_link', '_blank')" aria-label="Static Creative 5">
+        <strong>Static 5</strong>
+        <img src="https://drive.google.com/uc?export=view&id=1X52Ho7iD7SxAFonGC48njj0Kp0VZSjLB" alt="Static Creative Sample 5" loading="lazy" />
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/1b3NMbbfiwXu9Y85HKDWoCKLn_KYsxHJQ/view?usp=drive_link', '_blank')" aria-label="Static Creative 6">
+        <strong>Static 6</strong>
+        <img src="https://drive.google.com/uc?export=view&id=1b3NMbbfiwXu9Y85HKDWoCKLn_KYsxHJQ" alt="Static Creative Sample 6" loading="lazy" />
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/1xVRJ4FzRg1LYx9FnKeftO_SsoMN2VP1Q/view?usp=drive_link', '_blank')" aria-label="Static Creative 7">
+        <strong>Static 7</strong>
+        <img src="https://drive.google.com/uc?export=view&id=1xVRJ4FzRg1LYx9FnKeftO_SsoMN2VP1Q" alt="Static Creative Sample 7" loading="lazy" />
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/1ypSOJxwhOsCD9ZYh2iXQy4SVBgfXHstP/view?usp=drive_link', '_blank')" aria-label="Static Creative 8">
+        <strong>Static 8</strong>
+        <img src="https://drive.google.com/uc?export=view&id=1ypSOJxwhOsCD9ZYh2iXQy4SVBgfXHstP" alt="Static Creative Sample 8" loading="lazy" />
+      </div>
+
+      <!-- Video Links -->
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/12xrEforkFVUtEcJ0ZLdo-RGHLYqgjdF0/view?usp=drive_link', '_blank')" aria-label="Intro Video 1">
+        <strong>Intro Video 1</strong>
+        <video muted preload="none" loop playsinline>
+          <source src="https://drive.google.com/uc?export=view&id=12xrEforkFVUtEcJ0ZLdo-RGHLYqgjdF0" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/195SAfxzAh7tOl0cU2WcMaqjaKVO7cp3I/view?usp=drive_link', '_blank')" aria-label="Creative Video 2">
+        <strong>Creative Video 2</strong>
+        <video muted preload="none" loop playsinline>
+          <source src="https://drive.google.com/uc?export=view&id=195SAfxzAh7tOl0cU2WcMaqjaKVO7cp3I" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/1xemVLR1OeFVMh-bvDaFb47OhR_89d8Tq/view?usp=drive_link', '_blank')" aria-label="Intro Video 3">
+        <strong>Intro Video 3</strong>
+        <video muted preload="none" loop playsinline>
+          <source src="https://drive.google.com/uc?export=view&id=1xemVLR1OeFVMh-bvDaFb47OhR_89d8Tq" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://drive.google.com/file/d/16dTmo3urO4jFQF496N2YZM3co-UMoDQ1/view?usp=drive_link', '_blank')" aria-label="Intro Video 4">
+        <strong>Intro Video 4</strong>
+        <video muted preload="none" loop playsinline>
+          <source src="https://drive.google.com/uc?export=view&id=16dTmo3urO4jFQF496N2YZM3co-UMoDQ1" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Landing Pages -->
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://workshop.schooloflove.co.in/love-magnet-workshop-fb-v2/', '_blank')" aria-label="Love Magnet Workshop Landing Page">
+        <strong>Love Magnet Workshop Landing Page</strong>
+      </div>
+      <div class="work-link-card" tabindex="0" role="link" onclick="window.open('https://calmosis-bridge.netlify.app/natural-wellness?fbclid=IwY2xjawN_RVVleHRuA2FlbQIxMABicmlkETE1TVpoVk1UbktMQWFkQmYzc3J0YwZhcHBfaWQPNTQxNjM5NDkzODg5MDI1AAEeEK6j4MCcllDTIDy2XXd3iM-o3O-_NxLlwYQDRJ0tLC_WGvmTPExsQE7Dfk4_aem_OcEUcIqI7zUywjgC5YI3cA', '_blank')" aria-label="Natural Wellness Bridge Page">
+        <strong>Natural Wellness Bridge Page</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" aria-label="Contact Geethika">
+    <h2>Let’s build ads that don’t just look good but also convert.</h2>
+    <div class="contact-info">
+      <a href="mailto:mayalavarapugeethika@gmail.com" aria-label="Send Email to Geethika">
+        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        mayalavarapugeethika@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/geethika-mayalavarapu-77a88333b" target="_blank" rel="noopener noreferrer" aria-label="Visit Geethika LinkedIn">
+        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zm.03 4.5H1v15h4.98v-15zm7.02 0h-4.98v15h4.98v-8.1c0-4.4 5.98-4.75 5.98 0v8.1H21v-10.8c0-7.9-8.96-7.6-9.97 0v.1z"/></svg>
+        LinkedIn Profile
+      </a>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Small example micro-interactions: subtle fade-up on scroll
+  const fadeUpEls = document.querySelectorAll('.case-card, .pill-card, .badge-tag, .work-link-card, .btn, .intro-strip, .worksamples h2');
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+  const fadeUpObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+        observer.unobserve(entry.target);
+      }
+    })
+  }, options);
+
+  fadeUpEls.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(22px)";
+    fadeUpObserver.observe(el);
+  });
+
+  // Tooltip SVGs for metric badges added inline for clarity
+</script>
+
+</body>
+</html>
