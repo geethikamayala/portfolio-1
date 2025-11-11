@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Geethika Mayalavarapu | Creative Strategist Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-bg: #fff;
+  --color-text: #0b1220;
+  --color-teal: #06b6d4;
+  --color-coral: #ff6b6b;
+  --color-purple: #7c3aed;
+  --btn-radius: 12px;
+  --card-radius: 12px;
+  --shadow-primary: 0 10px 30px rgba(11,17,32,0.07);
+}
+body {
+  margin: 0; background: var(--color-bg); color: var(--color-text); font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.45;
+}
+h1,h2,h3,p,a,button,li { margin: 0; padding: 0; font-family: inherit;}
+h1 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 44px; line-height: 1.05; }
+h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 22px; margin-bottom: 16px;}
+h3 { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 18px;}
+a { color: var(--color-teal); text-decoration: none; font-weight:600;}
+a:hover, a:focus { text-decoration: underline;}
+button { border-radius: var(--btn-radius); border: none; font-family: 'Poppins', sans-serif;}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px;}
+section { width: 100%; padding: 44px 0; }
+/* Navigation styles */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  z-index: 100;
+  min-height: 62px;
+  box-shadow: 0 2px 16px rgba(11,17,32,0.03);
+}
+nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin: 0; padding: 0; font-size: 16px; transition: max-height .2s;}
+nav ul li a {
+  padding: 6px 13px;
+  border-radius: var(--btn-radius);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: background .2s;
+  white-space: nowrap;
+}
+nav ul li a:hover { background: var(--color-teal); color: white;}
+.hamburger {
+  display: none; flex-direction: column; justify-content: center; cursor: pointer;
+  margin-left: 18px; height: 32px; width: 36px; background: transparent; border: none; z-index:120; outline: none;
+}
+.hamburger span, .hamburger span:before, .hamburger span:after {
+  display: block; background: var(--color-text); height: 3px; border-radius:2px; width: 28px;
+  position: absolute; transition:.21s; content: '';
+}
+.hamburger span { position: relative; top: 14px;}
+.hamburger span:before { content: ''; position: absolute; top: -8px;}
+.hamburger span:after { content: ''; position: absolute; top: 8px;}
+@media (max-width: 900px) {
+  .container{padding:0 6px;}
+}
+@media (max-width: 740px) {
+  nav { padding: 0 2vw; min-height: 53px;}
+  nav ul {
+    flex-direction: column; position: absolute; top: 60px; right:0; background: var(--color-bg); width: 94vw; max-width: 288px;
+    box-shadow: 0 4px 24px rgba(11,17,32,0.05); border-radius: 0 0 14px 14px; align-items: flex-start; max-height: 0;
+    overflow: hidden; gap: 0; padding: 0; z-index:110;
+  }
+  nav ul.menu-open { max-height: 350px; display: flex; padding: 12px 0;}
+  nav ul li { width: 100%; margin: 0; padding: 0;}
+  nav ul li a { width: 100%; display: block; padding:14px 22px; font-size: 17px; border-radius:0; border-bottom:1px solid #f3f6fa;}
+  .hamburger { display: flex; position:relative;}
+}
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #f8fafc, #ffffff 80%);
+  padding: 56px 24px 66px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-primary);
+  display: flex; flex-direction: column; align-items: flex-start;
+  min-height:320px;
+}
+.hero-name-overlay {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; font-size: 20px; color: var(--color-teal);
+  user-select: none; opacity: 0.94; letter-spacing: .7px; margin-bottom:12px; z-index:2;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 180px 1fr; gap: 36px; align-items: center; width: 100%;
+}
+@media (max-width:900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 14px;}
+}
+@media (max-width: 600px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 8px;}
+  .hero{padding: 17vw 4vw 4vw;}
+  .hero-name-overlay { position: static; padding: 6px 0 10px 0; display: block; text-align: left; font-size:1.04em;}
+  .hero-image {margin: 0 auto 10px auto;}
+}
+.hero-image {
+  width: 150px; height: 150px; object-fit: cover; border-radius: 16px; box-shadow: 0 4px 21px rgba(11,17,32,0.18);
+  border: 3px solid var(--color-teal); background: #fff; margin-bottom: 10px;
+}
+.hero-content h1 { margin-top: 0; font-size:2.0em;}
+.hero-content .subheading { font-size: 1.13em; color: #536471; margin-bottom: 24px; font-weight: 500; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+.btn-primary { background: linear-gradient(90deg,#06b6d4,#7c3aed);color: white; padding: 13px 22px; border-radius: var(--btn-radius); font-size: 15px; font-weight: 700; box-shadow: var(--shadow-primary); transition: transform .3s, box-shadow .3s;}
+.btn-primary:hover { transform: scale(1.02); box-shadow: 0 15px 30px rgba(6,182,212,0.13);}
+.btn-outline { background: none; border: 2px solid var(--color-teal); color: var(--color-teal); padding: 12px 20px; font-weight: 700; border-radius: var(--btn-radius); font-size: 15px; box-shadow: var(--shadow-primary); transition: transform .3s, background-color .3s;}
+.btn-outline:hover { background-color: var(--color-teal); color: white; transform: scale(1.02);}
+.badge-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 11px;}
+.badge { background: linear-gradient(135deg, var(--color-teal), var(--color-purple)); color: white; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 9999px; box-shadow: var(--shadow-primary); user-select: none; white-space: nowrap;}
+.hero-stats-card {margin-top: 35px;background: #fff; display: flex; flex-wrap: wrap;border-radius: var(--card-radius);box-shadow: var(--shadow-primary);gap: 13px;padding: 20px 11px;align-items: center;justify-content: space-between;}
+.stat-item {flex: 1 0 160px;font-family: 'Poppins', sans-serif;font-weight: 700;font-size: 19px;color: var(--color-teal);background: linear-gradient(90deg,#06b6d4,#7c3aed 98%);background-clip:text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;position: relative;margin-bottom: 7px;}
+.stat-label { font-family: 'Inter', sans-serif; font-weight: 400; color: #536471; font-size: 14px; margin-top: 4px;}
+.intro-strip {background: linear-gradient(90deg, #e0f7fa 80%, #dcedc8 100%);border-radius: var(--card-radius);padding: 18px 18px;font-weight: 600;font-size: 18px;color: var(--color-teal);box-shadow: var(--shadow-primary);margin-bottom: 42px;}
+.about-section p:last-child { margin-bottom: 0; }
+.proof-banner { display: flex; gap: 16px; flex-wrap: wrap; }
+.proof-pill { flex-grow: 1; min-width: 140px; background: linear-gradient(90deg,#06b6d4,#7c3aed 98%); color: #fff; border-radius: var(--card-radius); padding: 15px; box-shadow: var(--shadow-primary); font-weight: 700; font-size: 14px; text-align: center; user-select: none; transition: transform .3s; letter-spacing:0.2px;}
+.proof-pill:hover { transform: scale(1.04);}
+.case-studies { margin-top: 25px;}
+.case-cards { display: flex; gap: 15px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 14px;}
+.case-card { scroll-snap-align: start; background: var(--color-bg); box-shadow: var(--shadow-primary); border-radius: var(--card-radius); flex: 0 0 32%; min-width: 300px; padding: 22px; display: flex; flex-direction: column; gap: 8px; transition: transform 0.3s;}
+.case-card:hover { transform: translateY(-6px) scale(1.01);}
+.case-card h3 { color: var(--color-purple);}
+.metric-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--color-teal); color: white; border-radius: 16px; padding: 6px 14px; font-weight: 700; font-size: 13px; font-family: 'Poppins', sans-serif;}
+.metric-icon { font-size: 18px; line-height: 0;}
+.card-footer { font-style: italic; font-size: 13px; color: #7c7c7c; margin-top: 7px;}
+.services-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 18px;
+  margin: 36px 0 21px 0;
+}
+.service-card { background: linear-gradient(110deg, #f8fafc 75%, #e0f7fa 110%); border-radius: var(--card-radius); box-shadow: 0 8px 32px rgba(11,17,32,0.09); padding: 28px 8px 24px; text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.09em; color: var(--color-purple); font-weight: 700; letter-spacing:0.1px; display: flex; flex-direction: column; align-items: center; gap: 14px; transition: transform .20s, background .20s; border: 2px solid #f4f6fa;}
+.service-card:hover { transform: scale(1.04); background: linear-gradient(90deg,#f0fdfa 80%, #e3e0fa 100%); border-color: var(--color-teal);}
+.service-icon { font-size: 2.1em; margin-bottom: 8px;}
+.filter-bar { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap;}
+.filter-btn { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; border-radius: var(--btn-radius); padding: 8px 11px; border: 2px solid var(--color-teal); background: white; color: var(--color-teal); cursor: pointer; transition: background-color .3s, color .3s;}
+.filter-btn.active, .filter-btn:hover { background: var(--color-teal); color: white;}
+.sample-gallery { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 18px; margin-bottom: 36px;}
+.sample-card { background: var(--color-bg); box-shadow: var(--shadow-primary); border-radius: var(--card-radius); padding: 13px; display: flex; flex-direction: column; justify-content: space-between;}
+.sample-btn { display: inline-block; padding: 12px 14px; border-radius: var(--btn-radius); background: linear-gradient(90deg,#7c3aed,#06b6d4); color: white; font-weight: 700; font-family: 'Poppins', sans-serif; text-align: center; text-decoration: none; box-shadow: var(--shadow-primary); user-select: none; transition: background .3s;}
+.sample-btn:hover, .sample-btn:focus { background: linear-gradient(90deg,#06b6d4,#7c3aed);}
+.ai-workflow { margin-top: 40px;}
+.ai-chips { display: flex; gap: 9px; flex-wrap: wrap; margin-bottom: 9px;}
+.ai-chip { background: var(--color-teal); color: white; padding: 8px 12px; border-radius: 9999px; font-weight: 700; font-family: 'Poppins', sans-serif; cursor: default; user-select: none; display: flex; align-items: center; gap: 5px;}
+.ads-section { margin-top: 42px; text-align: center;}
+.ads-section h2 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 22px; margin-bottom: 9px;}
+.ads-section p { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px; color: #666;}
+.contact-section { margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px; max-width: 700px; margin-left: auto; margin-right: auto; text-align: center;}
+.contact-section h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 22px; margin-bottom: 15px;}
+.contact-info { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 17px; color: var(--color-text);}
+.contact-info a { color: var(--color-teal);}
+html { scroll-behavior: smooth;}
+</style>
+</head>
+<body>
+<nav>
+  <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span>
+  </button>
+  <ul id="menu" aria-label="Primary navigation links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#adsamples">Samples</a></li>
+    <li><a href="#aiworkflow">AI</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<main class="container" role="main">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-name-overlay">Geethika Mayalavarapu</div>
+    <div class="hero-grid">
+      <img src="assets/image.jpg" alt="Geethika Mayalavarapu" class="hero-image" />
+      <div class="hero-content">
+        <h1>Creative Strategist Who Builds Ads That Actually Convert.</h1>
+        <p class="subheading">Blending data, psychology, and creative storytelling to scale ads for D2C brands and digital coaches.</p>
+        <div class="hero-buttons" role="group">
+          <button class="btn-primary" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">View Work</button>
+          <a class="btn-outline" href="https://app.enhancv.com/share/8ce32b46/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+        <div class="badge-row">
+          <span class="badge">D2C</span>
+          <span class="badge">Dating Coaches</span>
+          <span class="badge">Career Coaches</span>
+          <span class="badge">Occult coaches</span>
+          <span class="badge">Skincare</span>
+          <span class="badge">Performance Copy</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats-card">
+      <div class="stat-item">500+ Ads Created<div class="stat-label">in 12 months</div></div>
+      <div class="stat-item">₹1L+ Weekly Scaling Creatives</div>
+      <div class="stat-item">42%+ Hook Rate Achieved</div>
+      <div class="stat-item">Best CPA Beat Client Target (₹900 → ₹820)</div>
+      <div class="stat-item">₹2.4L+ Spend Scaled on Single Creative</div>
+    </div>
+  </section>
+  <section class="intro-strip">
+    I don't just create ads. I analyze them, optimize them, and scale them using creative intelligence + data.
+  </section>
+  <section class="about-section" id="about">
+    <h2>Meet the Brain Behind the Clicks.</h2>
+    <p>Hi, I’m Geethika Mayalavarapu, a Creative Strategist specializing in performance copy and data-driven creative direction.</p>
+    <p>I help brands scale by crafting scroll-stopping hooks, conversion-focused scripts, and audience-led messaging that works across Meta, YouTube, and funnel ecosystems.</p>
+    <p><strong>My edge?</strong> I don’t rely on guesses, I read creative metrics (CTR, hook rate, retention, CPA, funnel CVR) and turn insights into creative decisions that move the needle.</p>
+    <p>I work across: D2C Skincare · Dating & Career Coaches · Occult & Lifestyle Brands</p>
+    <p>🚀 The result? High-scaling ads driven by psychology, storytelling, and performance logic.</p>
+  </section>
+  <section class="proof-banner">
+    <div class="proof-pill">500+ Ads created in 12 months</div>
+    <div class="proof-pill">₹1L+ weekly scaling creatives</div>
+    <div class="proof-pill">42%+ Hook Rate achieved</div>
+    <div class="proof-pill">Best CPA beat client target (₹900 → ₹820)</div>
+    <div class="proof-pill">₹2.4L+ spend scaled on single creative</div>
+  </section>
+  <section class="case-studies" id="work">
+    <h2>Creative That Scaled — Backed By Data.</h2>
+    <p class="case-subheading">3 campaigns. 3 different audiences. 1 common outcome — optimized creatives that beat benchmarks and scaled hard.</p>
+    <div class="case-cards">
+      <article class="case-card">
+        <h3>Love School (Dating Coach)</h3>
+        <p><strong>Goal:</strong> L1 Workshop Registrations</p>
+        <p><strong>Target CPA:</strong> ₹900</p>
+        <p><strong>Achieved CPA:</strong> ✅ ₹820 (beat target)</p>
+        <div>
+          <span class="metric-badge"><span class="metric-icon">📌</span> ₹2,40,000+ ad spend</span>
+          <span class="metric-badge"><span class="metric-icon">⚡</span> 42.15% Hook Rate</span>
+          <span class="metric-badge"><span class="metric-icon">🎯</span> 1.62% CTR</span>
+        </div>
+        <p><strong>Role:</strong> Hooks → Copywriting → Script → Creative Direction → Optimization → Scaling</p>
+        <a class="sample-btn" href="https://drive.google.com/file/d/195SAfxzAh7tOl0cU2WcMaqjaKVO7cp3I/view?usp=drive_link" target="_blank" rel="noopener">Video 2</a>
+      </article>
+      <article class="case-card">
+        <h3>Career Coach</h3>
+        <p><strong>Strategy:</strong> To make a static that feels like the coach is talking directly to potential customers, addressing their pain points and giving solutions</p>
+        <div>
+          <span class="metric-badge"><span class="metric-icon">🚀</span> ₹1,00,000+ spent in 1 week</span>
+          <span class="metric-badge"><span class="metric-icon">🎯</span> 1.12%+ CTR</span>
+          <span class="metric-badge"><span class="metric-icon">📈</span> Scaled with static + script-led storytelling</span>
+        </div>
+        <p><strong>Role:</strong> Angle creation → Copy → Visual direction → Testing → Iteration</p>
+        <a class="sample-btn" href="https://drive.google.com/file/d/1zNrW4bU1D8F1W2xTGQo6Cqty_1HRL83J/view?usp=drive_link" target="_blank" rel="noopener">Static 1</a>
+      </article>
+      <article class="case-card">
+        <h3>D2C Skincare Brand</h3>
+        <p><strong>Goal:</strong> Mass produce ads, shoot 20 ads in a day, creative director role for shoot</p>
+        <div>
+          <span class="metric-badge"><span class="metric-icon">📌</span> 3+ ROAS achieved</span>
+          <span class="metric-badge">✅ Audience-led creative testing</span>
+          <span class="metric-badge">✅ Messaging + conversion-focused structure</span>
+        </div>
+        <p><strong>Role:</strong> Creative strategy → Messaging → Hooks → Copy → Performance reviews</p>
+        <a class="sample-btn" href="https://drive.google.com/file/d/1wNePesBN58VUAeVGle3EmVT8NP2VEK3v/view?usp=drive_link" target="_blank" rel="noopener">Video 3</a>
+      </article>
+    </div>
+    <p class="card-footer">One belief: Creative isn't just design, it's data, psychology, testing and storytelling working together.</p>
+  </section>
+  <section class="services-dashboard" id="services">
+    <div class="service-card"><span class="service-icon">🧠</span>Creative Strategy</div>
+    <div class="service-card"><span class="service-icon">📊</span>Paid Ad Creatives</div>
+    <div class="service-card"><span class="service-icon">✏️</span>Copywriting</div>
+    <div class="service-card"><span class="service-icon">🚀</span>Performance Centered Copywriting</div>
+  </section>
+  <section id="adsamples">
+    <h2>My Work Samples</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="video" aria-pressed="false">Video</button>
+      <button class="filter-btn" data-filter="static" aria-pressed="false">Static</button>
+      <button class="filter-btn" data-filter="landing" aria-pressed="false">Landing Page</button>
+    </div>
+    <div class="sample-gallery">
+      <div class="sample-card sample-video" data-type="video">
+        <a class="sample-btn" href="https://drive.google.com/file/d/12xrEforkFVUtEcJ0ZLdo-RGHLYqgjdF0/preview" target="_blank" rel="noopener">Video 1</a>
+      </div>
+      <div class="sample-card sample-video" data-type="video">
+        <a class="sample-btn" href="https://drive.google.com/file/d/195SAfxzAh7tOl0cU2WcMaqjaKVO7cp3I/preview" target="_blank" rel="noopener">Video 2</a>
+      </div>
+      <div class="sample-card sample-video" data-type="video">
+        <a class="sample-btn" href="https://drive.google.com/file/d/1xemVLR1OeFVMh-bvDaFb47OhR_89d8Tq/preview" target="_blank" rel="noopener">Video 3</a>
+      </div>
+      <div class="sample-card sample-video" data-type="video">
+        <a class="sample-btn" href="https://drive.google.com/file/d/16dTmo3urO4jFQF496N2YZM3co-UMoDQ1/preview" target="_blank" rel="noopener">Video 4</a>
+      </div>
+      <div class="sample-card sample-static" data-type="static">
+        <a class="sample-btn" href="https://drive.google.com/uc?export=view&id=1zNrW4bU1D8F1W2xTGQo6Cqty_1HRL83J" target="_blank" rel="noopener">Static 1</a>
+      </div>
+      <div class="sample-card sample-static" data-type="static">
+        <a class="sample-btn" href="https://drive.google.com/uc?export=view&id=15m2uqxLNtNmxwhKedQYlG2hJb3mhc_HP" target="_blank" rel="noopener">Static 2</a>
+      </div>
+      <div class="sample-card sample-static" data-type="static">
+        <a class="sample-btn" href="https://drive.google.com/uc?export=view&id=17qTtr7qC30odz22bGsLdPdHjC70LVFfE" target="_blank" rel="noopener">Static 3</a>
+      </div>
+      <div class="sample-card sample-static" data-type="static">
+        <a class="sample-btn" href="https://drive.google.com/uc?export=view&id=141PyvF98JnOk80cnX1w1x4jRFQQ63lSC" target="_blank" rel="noopener">Static 4</a>
+      </div>
+      <div class="sample-card sample-static" data-type="static">
+        <a class="sample-btn" href="https://drive.google.com/uc?export=view&id=1X52Ho7iD7SxAFonGC48njj0Kp0VZSjLB" target="_blank" rel="noopener">Static 5</a>
+      </div>
+      <div class="sample-card sample-static" data-type="static">
+        <a class="sample-btn" href="https://drive.google.com/uc?export=view&id=1b3NMbbfiwXu9Y85HKDWoCKLn_KYsxHJQ" target="_blank" rel="noopener">Static 6</a>
+      </div>
+      <div class="sample-card sample-static" data-type="static">
+        <a class="sample-btn" href="https://drive.google.com/uc?export=view&id=1xVRJ4FzRg1LYx9FnKeftO_SsoMN2VP1Q" target="_blank" rel="noopener">Static 7</a>
+      </div>
+      <div class="sample-card sample-static" data-type="static">
+        <a class="sample-btn" href="https://drive.google.com/uc?export=view&id=1ypSOJxwhOsCD9ZYh2iXQy4SVBgfXHstP" target="_blank" rel="noopener">Static 8</a>
+      </div>
+      <div class="sample-card sample-landing" data-type="landing">
+        <a class="sample-btn" href="https://workshop.schooloflove.co.in/love-magnet-workshop-fb-v2/" target="_blank" rel="noopener">Love Magnet Landing Page</a>
+      </div>
+      <div class="sample-card sample-landing" data-type="landing">
+        <a class="sample-btn" href="https://calmosis-bridge.netlify.app/natural-wellness?fbclid=IwY2xjawN_RVVleHRuA2FlbQIxMABicmlkETE1TVpoVk1UbktMQWFkQmYzc3J0YwZhcHBfaWQPNTQxNjM5NDkzODg5MDI1AAEeEK6j4MCcllDTIDy2XXd3iM-o3O-_NxLlwYQDRJ0tLC_WGvmTPExsQE7Dfk4_aem_OcEUcIqI7zUywjgC5YI3cA" target="_blank" rel="noopener">Natural Wellness Bridge Page</a>
+      </div>
+    </div>
+  </section>
+  <section class="ai-workflow" id="aiworkflow">
+    <h2>AI is my accelerator, not my replacement.</h2>
+    <div class="ai-chips">
+      <span class="ai-chip">🤖 ChatGPT</span>
+      <span class="ai-chip">🧠 Claude</span>
+      <span class="ai-chip">🔍 Perplexity</span>
+      <span class="ai-chip">✍️ Jasper</span>
+      <span class="ai-chip">🎨 MidJourney</span>
+      <span class="ai-chip">🎞️ Runway</span>
+      <span class="ai-chip">✂️ CapCut AI</span>
+    </div>
+    <p>Insight mining – Perplexity, Meta Library, ChatGPT<br>
+      Angle & hook ideation – Claude, ChatGPT<br>
+      Script & copywriting – Jasper, ChatGPT<br>
+      Creative direction – MidJourney, Runway, CapCut AI<br>
+      Iteration – Data + AI optimization loops</p>
+  </section>
+  <section class="ads-section" id="ads500">
+    <h2>500+ ads created. Lakhs of impressions influenced. One obsession - creatives that convert.</h2>
+    <p>From copy writing to creative strategy, funnels to hooks, I test fast, learn faster, and scale what works creatively.</p>
+  </section>
+  <section class="contact-section" id="contact">
+    <h2>Let’s build ads that don’t just look good but also convert.</h2>
+    <p class="contact-info">
+      Email: <a href="mailto:mayalavarapugeethika@gmail.com">mayalavarapugeethika@gmail.com</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/geethika-mayalavarapu-77a88333b" target="_blank" rel="noopener">www.linkedin.com/in/geethika-mayalavarapu-77a88333b</a>
+    </p>
+  </section>
+</main>
+<script>
+function toggleMenu() {
+  var navMenu = document.getElementById('menu');
+  navMenu.classList.toggle('menu-open');
+}
+// Filter buttons for sample gallery
+const filterButtons = document.querySelectorAll('.filter-btn');
+const sampleCards = document.querySelectorAll('.sample-card');
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+    const filter = btn.dataset.filter;
+    sampleCards.forEach(card => {
+      if(filter === 'all' || card.dataset.type === filter){
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
