@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Geethika Mayalavarapu | Creative Strategist Portfolio</title>
+<style>
+  /* Base & Reset */
+  body, h1, h2, h3, p, a, button, ul {
+    margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: #121212; color: #E4E4E6; line-height: 1.5; font-size: 16px; overflow-x: hidden;
+  }
+  a {
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #21a1f1;
+    text-decoration: underline;
+  }
+  button {
+    background-color: #21a1f1;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  button:hover {
+    background-color: #3db5ff;
+    transform: scale(1.05);
+  }
+  button:focus {
+    outline: 2px solid #61dafb;
+  }
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 60px 0 20px 0;
+    border-bottom: 2px solid #21a1f1;
+    padding-bottom: 6px;
+  }
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #c7c7d8;
+  }
+  .hero {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #272727;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-subheading {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #9dbbdc;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  .badge-tags {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .badge-tag {
+    background: #30354b;
+    padding: 8px 18px;
+    border-radius: 28px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #7eb2e5;
+    user-select: none;
+    box-shadow: 0 0 8px #21a1f1aa;
+    transition: box-shadow 0.3s ease;
+  }
+  .badge-tag:hover {
+    box-shadow: 0 0 20px #21a1f1cc;
+  }
+  .intro-strip {
+    font-weight: 600;
+    background: #212531;
+    color: #80aaff;
+    padding: 23px 18px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #2196f3bb;
+    margin-top: 40px;
+  }
+  .about-section p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .proof-banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .pill-card {
+    background: #1f2734;
+    color: #61dafb;
+    padding: 22px 38px;
+    border-radius: 32px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 200px;
+    cursor: default;
+    box-shadow: 0 0 10px #2196f3bb;
+    transition: box-shadow 0.3s ease;
+  }
+  .pill-card:hover {
+    box-shadow: 0 0 22px #21a1f1ee;
+    transform: scale(1.07);
+  }
+  .case-studies {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    overflow-x: auto;
+  }
+  .case-card {
+    min-width: 320px;
+    background: #232a3d;
+    border-radius: 16px;
+    padding: 26px 26px;
+    box-shadow: 0 6px 20px #222a44cc;
+    color: #9abaff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .case-card:hover {
+    box-shadow: 0 8px 28px #2980ffdd;
+    transform: translateY(-8px);
+    color: white;
+  }
+  .metric-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #003366;
+    border-radius: 22px;
+    padding: 7px 18px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #8ec1ff;
+    margin: 4px 10px 10px 0;
+    user-select: none;
+    cursor: default;
+  }
+  .metric-badge svg {
+    margin-right: 6px;
+    fill: #56a0ff;
+  }
+  .work-role {
+    margin-top: 12px;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #87a7d9;
+  }
+  .section-footer {
+    margin: 10px auto 40px auto;
+    max-width: 720px;
+    font-style: italic;
+    text-align: center;
+    color: #8aa1cf;
+  }
+  .process-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 600;
+  }
+  .process-list li {
+    background: #213151;
+    padding: 12px 22px;
+    border-radius: 22px;
+    color: #6196e6;
+    box-shadow: 0 0 9px #2955d1cc;
+    cursor: default;
+    transition: box-shadow 0.25s ease;
+  }
+  .process-list li:hover {
+    box-shadow: 0 0 18px #2b6dfbcc;
+  }
+  .badge-stack {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+  .badge-stack span {
+    background: #28406d;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    padding: 9px 18px;
+    color: #86a9ff;
+    box-shadow: 0 0 12px #1e3a7baa;
+  }
+  .ads-section h2 {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+    color: #cde1ff;
+  }
+  .ads-section p {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    color: #a6b5db;
+  }
+  .cards-row {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 28px 0 48px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #4191ff44 transparent;
+  }
+  .cards-row::-webkit-scrollbar {
+    height: 9px;
+  }
+  .cards-row::-webkit-scrollbar-thumb {
+    background-color: #4191ff44;
+    border-radius: 5px;
+  }
+  .card {
+    background: #292f4c;
+    min-width: 340px;
+    border-radius: 18px;
+    padding: 28px 24px 30px 24px;
+    box-shadow: 0 3px 18px #3656a4cc;
+    color: #bbc6ec;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  .card h3 {
+    color: #7ec0ff;
+    margin-bottom: 18px;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 40px #2b65fbcc;
+    color: white;
+  }
+  .card .footer-text {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #8aa3d9;
+  }
+  .icons-row {
+    margin-top: 12px;
+    font-size: 1.5rem;
+    color: #77aaffcc;
+    user-select: none;
+  }
+  .icons-row span {
+    margin-right: 18px;
+    vertical-align: middle;
+  }
+  iframe, video {
+    border-radius: 14px;
+    width: 100%;
+    max-height: 240px;
+    background: black;
+  }
+  .contact-section {
+    margin-top: 64px;
+    text-align: center;
+    border-top: 1px solid #263148;
+    padding-top: 40px;
+  }
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 22px;
+    color: #ade0ff;
+  }
+  .contact-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-email {
+    font-size: 1.15rem;
+    color: #7cc7ff;
+    font-weight: 600;
+    user-select: text;
+    max-width: 100%;
+  }
+  .contact-linkbtn {
+    background: transparent;
+    border: 2px solid #39a1ff;
+    color: #39a1ff;
+    padding: 10px 24px;
+    border-radius: 32px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .contact-linkbtn:hover {
+    background-color: #39a1ff;
+    color: black;
+  }
+
+  @media (max-width: 768px) {
+    .case-studies,
+    .cards-row {
+      flex-direction: column;
+      gap: 28px;
+      overflow-x: visible;
+    }
+    .pill-card {
+      width: 100%;
+    }
+    .btn-group {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .badge-tags {
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Hero Section">
+    <h1>GEETHIKA MAYALAVARAPU <br /><strong>Creative Strategist Who Builds Ads That Actually Convert.</strong></h1>
+    <p class="hero-subheading">Blending data, psychology, and creative storytelling to scale ads for D2C brands and digital coaches.</p>
+    <div class="btn-group">
+      <button onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'})">View Work</button>
+      <button onclick="window.open('https://app.enhancv.com/share/8ce32b46/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic', '_blank')">Download Resume</button>
+    </div>
+    <div class="badge-tags" aria-label="Badge Tags">
+      <span class="badge-tag">D2C</span>
+      <span class="badge-tag">Dating Coaches</span>
+      <span class="badge-tag">Career Coaches</span>
+      <span class="badge-tag">Occult coaches</span>
+      <span class="badge-tag">Skincare</span>
+      <span class="badge-tag">Performance Copy</span>
+    </div>
+  </section>
+
+  <!-- SHORT INTRO STRIP -->
+  <section class="intro-strip" aria-label="Intro Strip">
+    I don't just create ads. I analyze them, optimize them, and scale them using creative intelligence + data.
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" aria-label="About Section">
+    <h2>Meet the Brain Behind the Clicks.</h2>
+    <p>Hi, I’m Geethika Mayalavarapu, a Creative Strategist specializing in performance copy and data-driven creative direction.</p>
+    <p>I help brands scale by crafting scroll-stopping hooks, conversion-focused scripts, and audience-led messaging that works across Meta, YouTube, and funnel ecosystems.</p>
+    <p><strong>My edge?</strong> I don’t rely on guesses — I read creative metrics (CTR, hook rate, retention, CPA, funnel CVR) and turn insights into effective creative decisions.</p>
+    <p>I work across: D2C Skincare · Dating & Career Coaches · Occult & Lifestyle Brands</p>
+    <p>🚀 The result? High-scaling ads driven by psychology, storytelling, and performance logic.</p>
+  </section>
+
+  <!-- PROOF BANNER -->
+  <section class="proof-banner" aria-label="Proof Banner">
+    <div class="pill-card" tabindex="0" role="article" aria-label="500 plus ads created in 12 months">500+ Ads created in 12 months</div>
+    <div class="pill-card" tabindex="0" role="article" aria-label="One lakh plus weekly scaling creatives">₹1L+ weekly scaling creatives</div>
+    <div class="pill-card" tabindex="0" role="article" aria-label="Forty two percent plus hook rate achieved">42%+ Hook Rate achieved</div>
+    <div class="pill-card" tabindex="0" role="article" aria-label="Best CPA beat client target nine hundred to eight hundred twenty rupees">Best CPA beat client target (₹900 → ₹820)</div>
+    <div class="pill-card" tabindex="0" role="article" aria-label="Two lakh forty thousand rupees plus spend scaled on single creative">₹2.4L+ spend scaled on single creative</div>
+  </section>
+
+  <!-- CASE STUDIES SECTION -->
+  <section id="work" class="case-studies-section" aria-label="Case Studies Section">
+    <h2>Creative That Scaled — Backed By Data.</h2>
+    <p style="text-align:center; margin-bottom: 30px;">
+      3 campaigns. 3 different audiences. 1 common outcome — optimized creatives that beat benchmarks and scaled hard.
+    </p>
+    <div class="case-studies" aria-label="Case Study Cards">
+      
+      <article class="case-card" tabindex="0" aria-label="Love School case study dating coach">
+        <h3>Love School (Dating Coach)</h3>
+        <p><strong>Goal:</strong> L1 Workshop Registrations</p>
+        <p><strong>Target CPA:</strong> ₹900</p>
+        <p><strong>Achieved CPA:</strong> ✅ ₹820 (beat target)</p>
+        <div>
+          <span class="metric-badge" aria-label="Spent two lakh forty thousand rupees plus">📌 ₹2,40,000+ ad spend</span>
+          <span class="metric-badge" aria-label="Hook rate forty two point fifteen percent">⚡ 42.15% Hook Rate</span>
+          <span class="metric-badge" aria-label="Click through rate one point six two percent">🎯 1.62% CTR</span>
+        </div>
+        <p class="work-role">
+          Hooks → Copywriting → Script → Creative Direction → Optimization → Scaling
+        </p>
+      </article>
+
+      <article class="case-card" tabindex="0" aria-label="Career coach Bollywood angle campaign">
+        <h3>Career Coach (Bollywood Angle Campaign)</h3>
+        <p><strong>Strategy:</strong> Relatable Bollywood movie pain-point hooks</p>
+        <div>
+          <span class="metric-badge" aria-label="Spent one lakh rupees plus in 1 week">🚀 ₹1,00,000+ spent in 1 week</span>
+          <span class="metric-badge" aria-label="Click through rate one point twelve percent plus">🎯 1.12%+ CTR</span>
+          <span class="metric-badge" aria-label="Scaled with static and script led storytelling">📈 Scaled with static + script-led storytelling</span>
+        </div>
+        <p class="work-role">
+          Angle creation → Copy → Visual direction → Testing → Iteration
+        </p>
+      </article>
+
+      <article class="case-card" tabindex="0" aria-label="D2C skincare brand campaign">
+        <h3>D2C Skincare Brand</h3>
+        <p><strong>Goal:</strong> Profit-driven scaling</p>
+        <div>
+          <span class="metric-badge" aria-label="Return on ad spend three plus">📌 3+ ROAS achieved</span>
+          <span class="metric-badge" aria-label="Audience led creative testing">✅ Audience-led creative testing</span>
+          <span class="metric-badge" aria-label="Messaging and conversion focused structure">✅ Messaging + conversion-focused structure</span>
+        </div>
+        <p class="work-role">
+          Creative strategy → Messaging → Hooks → Copy → Performance reviews
+        </p>
+      </article>
+
+    </div>
+    <p class="section-footer">
+      One belief: Creative isn't just design — it's data, psychology, testing & storytelling working together.
+    </p>
+  </section>
+
+  <!-- WORK PROCESS -->
+  <section class="work-process" aria-label="Work Process">
+    <h2>Work Process</h2>
+    <div>
+      <h3>If data exists:</h3>
+      <ul class="process-list" role="list">
+        <li>Data</li>
+        <li>Angles</li>
+        <li>Hooks</li>
+        <li>Scripts</li>
+        <li>Production</li>
+        <li>Testing</li>
+      </ul>
+    </div>
+    <div>
+      <h3>If new account:</h3>
+      <ul class="process-list" role="list">
+        <li>Research</li>
+        <li>Positioning</li>
+        <li>Messaging</li>
+        <li>Copy</li>
+        <li>Design</li>
+        <li>Test</li>
+        <li>Optimize</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AI POWERED WORKFLOW -->
+  <section class="ai-workflow" aria-label="AI Powered Workflow">
+    <h2>AI is my accelerator, not my replacement.</h2>
+    <ul class="process-list" role="list" style="flex-wrap: wrap;">
+      <li>Insight mining — Perplexity, Meta Library, ChatGPT</li>
+      <li>Angle & hook ideation — Claude, ChatGPT</li>
+      <li>Script & copywriting — Jasper, ChatGPT</li>
+      <li>Creative direction — MidJourney, Runway, CapCut AI</li>
+      <li>Iteration — Data + AI optimization loops</li>
+    </ul>
+    <div class="badge-stack" aria-label="AI Tools Used">
+      <span>ChatGPT</span>
+      <span>Claude</span>
+      <span>Perplexity</span>
+      <span>Jasper</span>
+      <span>MidJourney</span>
+      <span>Runway</span>
+      <span>CapCut AI</span>
+    </div>
+  </section>
+
+  <!-- 500+ ADS SECTION -->
+  <section class="ads-section" aria-label="500 plus ads created">
+    <h2>500+ ads created. Millions of impressions influenced. One obsession — Performance.</h2>
+    <p>From UGC scripts to statics, funnels to hooks — I test fast, learn faster, and scale what works.</p>
+  </section>
+
+  <!-- MY WORK SECTION (statics, videos and landing pages) -->
+  <section class="projects-section" aria-label="My Work with statics videos and landing pages">
+    <h2>My Work</h2>
+    <div class="cards-row" aria-label="Static work samples">
+      <div class="card" tabindex="0">
+        <h3>Static 1</h3>
+        <a href="https://drive.google.com/file/d/1zNrW4bU1D8F1W2xTGQo6Cqty_1HRL83J/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          View Static 1
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Static 2</h3>
+        <a href="https://drive.google.com/file/d/15m2uqxLNtNmxwhKedQYlG2hJb3mhc_HP/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          View Static 2
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Static 3</h3>
+        <a href="https://drive.google.com/file/d/17qTtr7qC30odz22bGsLdPdHjC70LVFfE/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          View Static 3
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Static 4</h3>
+        <a href="https://drive.google.com/file/d/141PyvF98JnOk80cnX1w1x4jRFQQ63lSC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          View Static 4
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Static 5</h3>
+        <a href="https://drive.google.com/file/d/1X52Ho7iD7SxAFonGC48njj0Kp0VZSjLB/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          View Static 5
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Static 6</h3>
+        <a href="https://drive.google.com/file/d/1b3NMbbfiwXu9Y85HKDWoCKLn_KYsxHJQ/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          View Static 6
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Static 7</h3>
+        <a href="https://drive.google.com/file/d/1xVRJ4FzRg1LYx9FnKeftO_SsoMN2VP1Q/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          View Static 7
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Static 8</h3>
+        <a href="https://drive.google.com/file/d/1ypSOJxwhOsCD9ZYh2iXQy4SVBgfXHstP/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          View Static 8
+        </a>
+      </div>
+    </div>
+
+    <div class="cards-row" aria-label="Video work samples">
+      <div class="card" tabindex="0">
+        <h3>Video 1</h3>
+        <a href="https://drive.google.com/file/d/12xrEforkFVUtEcJ0ZLdo-RGHLYqgjdF0/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          Watch Video 1
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Video 2</h3>
+        <a href="https://drive.google.com/file/d/195SAfxzAh7tOl0cU2WcMaqjaKVO7cp3I/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          Watch Video 2
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Video 3</h3>
+        <a href="https://drive.google.com/file/d/1xemVLR1OeFVMh-bvDaFb47OhR_89d8Tq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          Watch Video 3
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Video 4</h3>
+        <a href="https://drive.google.com/file/d/16dTmo3urO4jFQF496N2YZM3co-UMoDQ1/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          Watch Video 4
+        </a>
+      </div>
+    </div>
+
+    <div class="cards-row" aria-label="Landing and bridge pages">
+      <div class="card" tabindex="0">
+        <h3>Love Magnet Workshop</h3>
+        <a href="https://workshop.schooloflove.co.in/love-magnet-workshop-fb-v2/" target="_blank" rel="noopener noreferrer">
+          View Landing Page
+        </a>
+      </div>
+      <div class="card" tabindex="0">
+        <h3>Natural Wellness Bridge</h3>
+        <a href="https://calmosis-bridge.netlify.app/natural-wellness?fbclid=IwY2xjawN_RVVleHRuA2FlbQIxMABicmlkETE1TVpoVk1UbktMQWFkQmYzc3J0YwZhcHBfaWQPNTQxNjM5NDkzODg5MDI1AAEeEK6j4MCcllDTIDy2XXd3iM-o3O-_NxLlwYQDRJ0tLC_WGvmTPExsQE7Dfk4_aem_OcEUcIqI7zUywjgC5YI3cA" target="_blank" rel="noopener noreferrer">
+          View Bridge Page
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" aria-label="Contact Section">
+    <h2>Let’s build ads that don’t just look good — they convert.</h2>
+    <div class="contact-btns" role="group" aria-label="Contact Methods">
+      <button onclick="window.open('mailto:mayalavarapugeethika@gmail.com')">Email Me</button>
+      <button class="contact-linkbtn" onclick="window.open('https://www.linkedin.com/in/geethika-mayalavarapu-77a88333b', '_blank')">LinkedIn Profile</button>
+    </div>
+    <p class="contact-email" aria-label="Email address">mayalavarapugeethika@gmail.com</p>
+  </section>
+</div>
+
+</body>
+</html>
